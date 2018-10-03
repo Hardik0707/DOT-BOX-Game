@@ -207,7 +207,7 @@ void playerInfo()
 	settextstyle(0,0,2);
 	settextjustify(CENTER_TEXT,CENTER_TEXT);
 	setcolor(0);
-	outtextxy(midx,midy-60,"Enter Players Name");
+	outtextxy(midx,midy-60,"Enter Player's Name");
 
 	settextstyle(0,0,2);
 	setcolor(15);
@@ -442,11 +442,11 @@ void final_score()
 	outtextxy(midx-30,midy+25,p[1].name);
 	itoa(p[1].score,score,10);
 	outtextxy(midx+50,midy+25,score);
-
+		outtextxy(midx+40,midy+65,"Congrats!!");
 	if(p[1].score > p[0].score)
-		outtextxy(midx+40,midy+65,"Player 2 has won the Game !!!");
+		outtextxy(midx+40,midy+65,"Player 2 has won the Game!");
 	else if(p[1].score < p[0].score)
-		outtextxy(midx+40,midy+65,"Player 1 has won the Game !!!");
+		outtextxy(midx+40,midy+65,"Player 1 has won the Game!");
 	else
 		outtextxy(midx,midy+65,"Tie !");
 	delay(5000);
