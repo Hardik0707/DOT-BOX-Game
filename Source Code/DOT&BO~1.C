@@ -207,7 +207,7 @@ void playerInfo()
 	settextstyle(0,0,2);
 	settextjustify(CENTER_TEXT,CENTER_TEXT);
 	setcolor(0);
-	outtextxy(midx,midy-60,"Enter Players Name");
+	outtextxy(midx,midy-60,"Enter Player's Name");
 
 	settextstyle(0,0,2);
 	setcolor(15);
@@ -245,7 +245,7 @@ void GAME()
 	bar(0,y,x,y-20);
 	settextstyle(0,0,2);
 	settextjustify(CENTER_TEXT,CENTER_TEXT);
-	outtextxy(midx,y-10,"LClk: Vertical RClik: Horizontal");
+	outtextxy(midx,y-10,"Left Click for Vertical & Right Click for Horizontal");
 
 	rectangle(20,50,x-200,y-30);
 	rectangle(x-180,50,x-20,midy);
@@ -433,7 +433,7 @@ void final_score()
 	cleardevice();
 	setcolor(15);
 	settextstyle(0,0,2);
-	outtextxy(midx,midy-25,"Final Score");
+	outtextxy(midx,midy-25,"Final Score is");
 	itoa(p[0].score,score,10);
 	setcolor(10);
 	outtextxy(midx-30,midy,p[0].name);
@@ -442,11 +442,11 @@ void final_score()
 	outtextxy(midx-30,midy+25,p[1].name);
 	itoa(p[1].score,score,10);
 	outtextxy(midx+50,midy+25,score);
-
+		outtextxy(midx+40,midy+65,"Congrats!!");
 	if(p[1].score > p[0].score)
-		outtextxy(midx+40,midy+65,"Player 2 has won the Game !!!");
+		outtextxy(midx+40,midy+65,"Player 2 has won the Game!");
 	else if(p[1].score < p[0].score)
-		outtextxy(midx+40,midy+65,"Player 1 has won the game !!!");
+		outtextxy(midx+40,midy+65,"Player 1 has won the Game!");
 	else
 		outtextxy(midx,midy+65,"Tie !");
 	delay(5000);
@@ -455,15 +455,15 @@ void final_score()
 void ExitScreen()
 {
 	cleardevice();
-	setbkcolor(YELLOW);
-	setcolor(RED);
+	setbkcolor(BLUE);
+	setcolor(WHITE);
 	setlinestyle(DOTTED_LINE,2,4);
 	rectangle(50,50,x-50,y-125);
 	rectangle(60,60,x-60,y-135);
 	settextstyle(1,HORIZ_DIR,5);
 	settextjustify(CENTER_TEXT,CENTER_TEXT);
-	outtextxy(320,150,"THANK YOU!");
-	outtextxy(330,230,"FOR PLAYING.");
+	outtextxy(320,150,"Thanks! For Playing..");
+	outtextxy(330,230,"Have a nice day :)");
 	delay(2000);
 }
 /*========================================================================*/
